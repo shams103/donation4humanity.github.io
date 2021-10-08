@@ -1,0 +1,165 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donation</title>
+    <link rel="stylesheet" href="css/styledonation.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2|Bree+Serif&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
+</head>
+<style>
+    body {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.03), rgba(0, 0, 0, 0.01)), url('images/contact.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    a{
+        text-decoration: none;
+    }
+
+    .container {
+        margin-top: 150px;
+        height: 290px;
+    }
+
+    .container .row {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        
+    }
+
+    .container .row .col-3 {
+        flex-basis: 30%;
+        margin-left: 10px;
+        margin-right: 10px;
+        min-width: 230px;
+    }
+    .container .row .col-3:first-of-type{
+        padding-left: 40px;
+    }
+    .good{
+        margin-top: 59px;
+    }
+    .info-item{
+        align-items:flex-end
+    }
+    .form-group{
+      margin: 5px; 
+    }
+    .form-group textarea{
+        
+        height: 110px;
+        width: 100%;
+        padding-top: 8px;
+    }
+    .form-control{
+        width: 90%;
+        height: 33px;
+        border: none;
+        outline: none;
+        padding-left: 14px;
+    }
+    .fa{
+        margin-right: 17px;
+    }
+    .btn3{
+        width: 170px;
+        padding: 10px 17px 10px 17px;
+        font-size: 16px;   
+        background-color: rgba(0, 0, 0, 0.15);
+        color:rgb(255, 255, 255);
+        border: none;
+        margin-left: 227px;
+        transition: 0.6s;
+    }
+    .btn3:hover{
+        background: black;
+    }
+</style>
+
+<body>
+    <nav>
+
+        <div class="logo">
+            <h1 class="animate__heartBeat">DONATE</h1>
+        </div>
+        <div class="menu">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html" class="active">Contact </a>
+        </div>
+    </nav>
+
+    <script>
+        function validation() {
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var subject = document.getElementById("subject").value;
+            var message = document.getElementById("message").value;
+
+            if (name == "") {
+                alert("Please Enter Name");
+            }
+            else if (email == "") {
+                alert("Please Enter Email Id");
+            }
+            else if (subject == "") {
+                alert("Please Enter subject");
+            }
+            else if (message == "") {
+                alert("Please Write Message");
+            }
+            else {
+                alert("Message Send Successfully !");
+
+            }
+        }
+    </script>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-3">
+                <div class="info_item">
+                    <h3 style="color:rgb(107, 236, 96);"><i class="fa fa-home icon"></i>Vasant Kunj,Delhi</h3>
+
+                </div><br>
+                <div class="info_item">
+                    
+                    <h3><a href="#" style="color:rgb(107, 236, 96);"><i class="fa fa-phone icon"></i>+918893092387</a></h3>
+
+                </div><br>
+                <div class="info_item">
+                    
+                    <h3><a href="#" style="color:rgb(107, 236, 96);"><i class="fa fa-envelope icon"></i>letsdonate@4humanity.com</a></h3>
+                </div>
+            </div>
+
+            <div class="col-3">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name">
+                </div>
+                <div class="form-group">
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Enter email address">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="subject" name="subject" placeholder="Enter Subject">
+                </div>
+            </div>
+            <div class="col-3 good">
+                <div class="form-group">
+                    <textarea class="form-control" name="message" id="message" rows="3"
+                        placeholder="Enter Message"></textarea>
+                </div><br>
+                <div>
+                    <button type="submit" class="btn3" value="submit" onclick="validation()">Send
+                        Message</button>
+                </div>
+            </div>
+        </div>
+    </div>
